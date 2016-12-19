@@ -15,6 +15,7 @@ $form-element-height: 44px;
  	form.ng-submitted &.ng-invalid,
  	&.ng-invalid.ng-touched {
  		border-color: $color-error;
+ 		color: $color-error;
  		border-width: 2px;
  	}
 }
