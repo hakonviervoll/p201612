@@ -17,12 +17,14 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis enim lobortis justo sollicitudin vulputate.
       </div>
 
-      <select id="bonus" ng-model="$ctrl.formData.bonus">
+      <select id="bonus" name="bonus" required ng-model="$ctrl.formData.bonus">
+        <option value="">Velg bonus...</option>
         <option value="60">60%</option>
         <option value="65">65%</option>
         <option value="70">70%</option>
         <option value="75">75%</option>
       </select>
+      <form-error name="bonus" form="form" messages="{required: 'Velg bonus'}"></form-error>
     </fieldset>
 
     <fieldset>

@@ -1,7 +1,9 @@
 class AppController {
   /** @ngInject */
   constructor() {
-    this.formData = {};
+    this.formData = {
+      bonus: '60'
+    };
     this.price = 0;
   }
 
