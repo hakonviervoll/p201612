@@ -1,0 +1,26 @@
+body {
+	font: 14px MuseoSans-500, Arial, sans-serif;
+	line-height: 1.4em;
+	color: rgb(0, 39, 118);
+	min-width: 230px;
+	max-width: 550px;
+	margin: 0 auto;
+
+	&, & * {
+		box-sizing: border-box;
+	}
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+ul.error {
+	list-style: none inside none;
+	color: $color-error;
+
+	& li {
+		list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAWCAIAAABCPVsWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEvSURBVDhPY/z//z8D6YAJSpMI6KsN3W//Xlx9taX7++49f58/BUlwSDOpunC4lQp5aXOyQpSAALK2d+8W575fsOzfbygfBYhFcVdMljIRgvBg2n4/ftlk/engY7AgDsCqzF59Ss4JpBPit99vpxLSAwS/7/5sDXl2DeQYkLZ/5yd+XEdIDwT83v+1d+FnsCN/vW7j/bDjJ1SCMBDlaH8KtO34973E6wGC178uX2diuHnrD9agww3+PXxEVnS/ekGWNjEJJgZ1NRak6CcGMMnLAW2z5HRmhwoQBUTZdDWB2liFPVuYoUJEANU2AWtWkN+YDPP5g2QhggQAqyN3cTwvLHGxCmcf5bMnpBOUJtdIaYFCAhaSrLLizReEU6OYcAUPMAd0QtMxEFAhvxENGBgA3LN4PIFIelsAAAAASUVORK5CYII=);
+	}
+}

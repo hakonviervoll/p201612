@@ -1,0 +1,61 @@
+<section>
+  <h1>Kjøp bilforsikring</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis enim lobortis justo sollicitudin vulputate. Quisque eros libero, laoreet nec nibh tincidunt, ultrices consequat mi. Cras eget ante id enim vehicula viverra.</p>
+
+  <form name="form" ng-submit="$ctrl.handleSubmit(form)" novalidate>
+
+    <fieldset>
+      <label for="regnr">Bilens registreringsnummer</label>
+      <input id="regnr" name="regnr" class="input-width-M" type="text" pattern="[A-Za-z]{2} ?[0-9]{5}" placeholder="AB 12345" required ng-model="$ctrl.formData.regnr">
+      <form-error name="regnr" form="form" messages="{required: 'Registreringsnummer må fylles ut', pattern: 'Skriv inn et gyldig registreringsnummer'}"></form-error>
+    </fieldset>
+
+    <fieldset>
+      <label for="bonus">Din bonus <span class="infoicon" ng-click="showInfo=!showInfo"></span></label>
+
+      <div class="infobox" ng-show="showInfo" ng-click="showInfo=false">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis enim lobortis justo sollicitudin vulputate.
+      </div>
+
+      <select id="bonus" ng-model="$ctrl.formData.bonus">
+        <option value="60">60%</option>
+        <option value="65">65%</option>
+        <option value="70">70%</option>
+        <option value="75">75%</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <label for="fnr">Fødselsnummer</label>
+      <input id="fnr" name="fnr" class="input-width-M" type="text" pattern="[0-9]{11}" maxlength="11" required ng-model="$ctrl.formData.fnr">
+      <form-error name="fnr" form="form" messages="{required: 'Fødselsnummer må fylles ut', pattern: 'Skriv inn et gyldig fødselsnummer'}"></form-error>
+    </fieldset>
+
+    <fieldset class="responsive">
+      <div class="form-group">
+        <label for="fornavn">Fornavn</label>
+        <input id="fornavn" ng-model="$ctrl.formData.fornavn">
+      </div>
+
+      <div class="form-group">
+        <label for="etternavn">Etternavn</label>
+        <input id="etternavn" ng-model="$ctrl.formData.etternavn">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <label for="epost">E-post</label>
+      <input id="epost" name="epost" type="email" ng-model="$ctrl.formData.epost" required>
+      <form-error name="epost" form="form" messages="{required: 'E-postadresse må fylles ut', email: 'Skriv inn en gyldig e-postadresse'}"></form-error>
+    </fieldset>
+
+    <fieldset class="form-actions">
+      <div ng-show="$ctrl.price>0">
+        Din pris: {{$ctrl.price}} kr/mnd
+      </div>
+
+      <button type="submit">Beregn pris</button>
+      <button type="button" class="cancel" ng-click="$ctrl.handleCancel(form)">Avbryt</button>
+    </fieldset>
+  </form>
+</section>

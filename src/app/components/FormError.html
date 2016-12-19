@@ -1,0 +1,4 @@
+
+<ul class="error" ng-show="$ctrl.form.$submitted || $ctrl.form[$ctrl.name].$touched">
+  <li ng-repeat="(errorKey, message) in $ctrl.messages" ng-show="$ctrl.form[$ctrl.name].$error[errorKey]">{{message}}</li>
+</ul>
