@@ -21,6 +21,15 @@ $border-radius: 4px;
 	padding: 8px 10px;
 }
 
+.price {
+	display: inline-block;
+    background: $color-icon;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    margin: 5px 0;
+}
+
 @media screen and (min-width: 480px) {
 
 	input, select {

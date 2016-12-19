@@ -52,8 +52,9 @@
     </fieldset>
 
     <fieldset class="form-actions">
+
       <div ng-show="$ctrl.price>0">
-        Din pris: {{$ctrl.price}} kr/mnd
+        <div class="price">Din pris: {{$ctrl.price}} kr/mnd</div>
       </div>
 
       <button type="submit">Beregn pris</button>
